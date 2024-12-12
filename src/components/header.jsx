@@ -4,7 +4,7 @@ import { ShoppingCartOutlined } from "@ant-design/icons";
 
 export const Header = () => {
     return (
-        <div>
+        <div className="bg-white z-50 sticky top-0">
             <Container className={"flex justify-between items-center py-3"} >
             <div className="flex  gap-3">
                 <Select defaultValue="EN" bordered={false} >

@@ -8,3 +8,5 @@ export {Banner} from './banner';
 export {WhyUs} from './whyus';
 export {SearchInput} from './searchInput';
 export {Footer} from './footer';
+export {Filtration} from './filtration';
+export {ShopList} from './shopList';
