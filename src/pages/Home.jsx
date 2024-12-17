@@ -1,4 +1,4 @@
-import { BestSeller, MyCarousel, Banner, WhyUs, SearchInput, } from "../components"
+import { BestSeller, MyCarousel, Banner, WhyUs } from "../components"
 
 export const HomePage = () => {
     return (
@@ -7,7 +7,6 @@ export const HomePage = () => {
             <BestSeller />
             <Banner />
             <WhyUs />
-            <SearchInput />
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HomePage, ShopPage } from "./pages/";
+import { HomePage, ProductPage, ShopPage } from "./pages/";
 import HeaderLayout from "./layouts/HeaderLayout";
 
 function App() {
@@ -19,7 +19,12 @@ function App() {
           </HeaderLayout>
           }
          />
-
+         <Route path="/product/:id" element={
+          <HeaderLayout>
+            <ProductPage />      
+          </HeaderLayout>
+          }
+          />
       </Routes>
     </Router>
   );

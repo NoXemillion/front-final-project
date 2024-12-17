@@ -16,6 +16,7 @@ export const Banner = () => {
           </span>
           <Button
             type="link"
+            href="/shop"
             className="mt-5 text-[20px] text-white font-bold underline underline-offset-4  decoration-white "
             size="large"
             >
