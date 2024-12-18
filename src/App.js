@@ -1,33 +1,32 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HomePage, ProductPage, ShopPage } from "./pages/";
-import HeaderLayout from "./layouts/HeaderLayout";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header'; 
+import Home from './pages/Home';
+import ProductManagement from './pages/ProductManagement';
+import InventoryManagement from './pages/InventoryManagement';
+import OrderManagement from './pages/OrderManagement';
+import UserManagement from './pages/UserManagement';
+import ContentManagement from './pages/CMS.jsx';
+import ReportsAndAnalytics from './pages/Reports.jsx';
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={
-          <HeaderLayout>
-            <HomePage />
-          </HeaderLayout>
-          } 
-        />
-        <Route path="/shop" element={
-          <HeaderLayout>
-            <ShopPage />      
-          </HeaderLayout>
-          }
-         />
-         <Route path="/product/:id" element={
-          <HeaderLayout>
-            <ProductPage />      
-          </HeaderLayout>
-          }
-          />
-      </Routes>
-    </Router>
+    
+      <Router>
+        <Header />
+        <div className="container mx-auto mt-8">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<ProductManagement />} />
+            <Route path="/inventory" element={<InventoryManagement />} />
+            <Route path="/orders" element={<OrderManagement />} />
+            <Route path="/users" element={<UserManagement />} />
+            <Route path="/cms" element={<ContentManagement />} />
+            <Route path="/reports" element={<ReportsAndAnalytics />} />
+          </Routes>
+        </div>
+      </Router>
   );
-}
+};
 
 export default App;
