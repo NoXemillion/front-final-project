@@ -18,11 +18,10 @@ export const SubHeader = () => {
                 <Menu
                     mode="horizontal"
                     selectedKeys={[location.pathname]}
-                    className="w-[400px] flex justify-between items-center"
+                    className="w-[200px] flex justify-between items-center"
                     items={[
                         { key: '/', label: <Link to="/">HOME</Link> },
                         { key: '/shop', label: <Link to="/shop">SHOP</Link> },
-                        { key: '/contact', label: <Link to="/contact">CONTACTS</Link> },
                     ]}
                 />
             </Container>

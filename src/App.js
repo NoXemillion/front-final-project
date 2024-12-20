@@ -10,6 +10,14 @@ import OrderManagement from "./pages/OrderManagement";
 import UserManagement from "./pages/UserManagement";
 import ContentManagement from "./pages/CMS";
 import ReportsAndAnalytics from "./pages/Reports";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Profile from "./pages/Profile";
+import UpdateProfile from './pages//UpdateProfile';
+import RequestPasswordReset from './pages/RequestPasswordReset';
+import ResetPassword from './pages/ResetPassword';
+
+
 function App() {
   return (
     <Router>
@@ -67,6 +75,12 @@ function App() {
               <ReportsAndAnalytics />
             </AdminHeaderLayout>
           } />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/update-profile" element={<UpdateProfile />} />
+          <Route path="/request-reset-password" element={<RequestPasswordReset />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
       </Routes>
     </Router>
   );
