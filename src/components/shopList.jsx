@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux"
 import { CardItem } from "./cardItem"
 import { useEffect } from "react";
+import Loader from "./Loader";
 import { fetchProducts } from "../redux/productsSlice";
 export const ShopList = () => {
     const {products, isLoading, error} = useSelector((state) => state.products);
@@ -12,7 +13,7 @@ export const ShopList = () => {
     
 
     if (isLoading) {
-        return <div>Loading...</div>
+        return <Loader />
     }
     if (error) {
         return <div>{error}</div>

@@ -1,12 +1,12 @@
 // filtersSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axiosInstance from "../api/axiosInstance";
+import api from "../api/api";
 
 export const fetchBrands = createAsyncThunk(
   'filters/fetchBrands',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axiosInstance.get('CatalogBrand/GetCatalogBrands');
+      const response = await api.get('CatalogBrand/GetCatalogBrands');
       console.log('API Response:', response.data);
       return response.data;
     } catch (error) {
@@ -21,7 +21,7 @@ export const fetchTypes = createAsyncThunk(
   'filters/fetchTypes',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axiosInstance.get('/CatalogType/GetCatalogTypes');
+      const response = await api.get('/CatalogType/GetCatalogTypes');
       console.log('API Response:', response.data);
       return response.data;
     } catch (error) {

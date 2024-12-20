@@ -4,6 +4,7 @@ import { CardItem, Container } from "./"
 import { Button } from "antd"
 import { useSelector, useDispatch } from "react-redux"
 import { fetchProducts } from "../redux/productsSlice"
+import Loader from "./Loader";
 
 export const BestSeller = () => {
 
@@ -17,7 +18,7 @@ export const BestSeller = () => {
 
 
     if (isLoading) {
-        return <div>Loading...</div>
+        return <Loader />
     }
     if (error) {
         return <div>{error}</div>

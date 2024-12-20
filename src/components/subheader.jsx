@@ -9,10 +9,12 @@ export const SubHeader = () => {
     return (
         <div>
             <Container className="flex justify-between items-center py-3">
+               <Link to={'/'}>
                 <div className="flex gap-3 items-center">
-                    <Logo width={40} />
-                    <p className="font-bold">E-COMMERCE</p>
-                </div>
+                        <Logo width={40} />
+                        <p className="font-bold">E-COMMERCE</p>
+                    </div>
+                </Link>
                 <Menu
                     mode="horizontal"
                     selectedKeys={[location.pathname]}
